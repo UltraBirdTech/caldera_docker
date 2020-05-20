@@ -1,18 +1,18 @@
-# easybuggy4django_docker
+# caldera_docker
 
 ## URL
-https://github.com/k-tamura/easybuggy4django
+https://github.com/mitre/caldera
 
 ## INITIALIZE
 
 ### Git clone this repository.
 ```
-$ git@github.com:UltraBirdTech/easybuggy4django_docker.git
+$ git@github.com:UltraBirdTech/caldera_docker.git
 ```
 
 ### build Docker image
 ```
-$ docker build -t easybuggy:django .
+$ docker build -t caldera:django .
 Sending build context to Docker daemon  2.048kB
 Step 1/8 : From python:3.6
 3.6: Pulling from library/python
@@ -30,30 +30,25 @@ bbc37f14aded: Pull complete
 Removing intermediate container d5cadb29a7c8
  ---> 64bf5a10d280
 Successfully built 64bf5a10d280
-Successfully tagged easybuggy:django
+Successfully tagged caldera:django
 ```
 
 ### Check Docker Image
 ```
 $ docker images
 REPOSITORY        TAG                 IMAGE ID            CREATED             SIZE
-easybuggy         django              64bf5a10d280        11 minutes ago      1.1GB
 ```
 
 ## HOW TO CONTROL
 ### START SERVER
 
 ```
-docker run -d -p 9000:8000 easybuggy:django
 ```
 
-access to `http://localhost:9000`.
 
 ### CHECK PROCESS
 ```
 $ docker ps 
-CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES
-[CONTAINER ID]        easybuggy:django    "python manage.py ru…"   About a minute ago   Up About a minute   0.0.0.0:9000->8000/tcp   pensive_bardeen
 ```
 
 ### STOP SERVER
