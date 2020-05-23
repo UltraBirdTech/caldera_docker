@@ -11,6 +11,7 @@ RUN git clone https://github.com/mitre/caldera.git
 WORKDIR /usr/src/app/caldera/
 
 RUN git checkout refs/tags/2.6.6
+RUN git submodule update -i
 
 #RUN python3.6 -m pip install --upgrade pip
 #RUN python3.6 -m pip install -r requirements.txt
